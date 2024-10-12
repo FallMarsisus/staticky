@@ -109,7 +109,7 @@ def create_colloscope(groupe:int, timezone:str = "Europe/Paris"):
         e.duration = ({'hours': 1});
         e.location = f"{room} - Saint-Louis"
         e.description = f"Professeur: {professor}\nSalle: {room}\nMatière : {matière}"
-        e.organizer = "Simon Lancelin"
+        e.organizer = f"Groupe {groupe}"
         e.alarms = []
         c.events.add(e)
         
