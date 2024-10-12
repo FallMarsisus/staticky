@@ -36,10 +36,15 @@ async def on_message(message):
     if "j'aime" in message.content.lower()[:6]:
         await message.author.edit(nick=f'{message.content[6:]}')
     
-    if "dis" in message.content.lower()[:3]:
-        await message.channel.send(f"{message.content[3:]}")
-    elif "di" in message.content.lower()[:2] or "dy" in message.content.lower()[:2]:
-        await message.channel.send(f"{message.content[2:]}")
+    for i in range(len(message.content.split())):
+        if len(message.content.split()[i]) < 4:
+            continue
+        if "dis" in message.content.lower().split()[i][:3] or "dit" in message.content.lower().split()[i][:3]:
+            await message.channel.send(f"{message.content.split()[i][3:]}")
+        elif "cri" in message.content.lower().split()[i][:3]:
+            await message.channel.send(f"{message.content.upper().split()[i][3:]}")
+        elif "di" in message.content.lower().split()[i][:2] or "dy" in message.content.lower().split()[i][:2]:
+            await message.channel.send(f"{message.content.split()[i][2:]}")
 
 
 # slash commands 
@@ -67,7 +72,7 @@ async def recup_colles(interaction:discord.Interaction, group:str, timezone:str 
 async def help(interaction:discord.Interaction):
     embed = discord.Embed(title="Le Bot des MP2I[3]",
                       url="https://staticky.marsisus.me",
-                      description="Bienvenue sur la page d'aide du bot !",
+                      description="Bienvenue sur la page d'aide du bot !\n#Voici les commandes disponibles :\n - `/parse_colles [groupe] {timezone}` : Récupérer un fichier en .ics contenant vos colles du S1\n - `/help` : Afficher l'aide",
                       colour=0x00b0f4,
                       timestamp=datetime.now())
 
