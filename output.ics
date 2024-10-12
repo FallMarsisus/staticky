@@ -1,0 +1,265 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Lattanzio\nSalle: C391\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C391 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241204T140000Z
+SUMMARY:Colle Anglais
+UID:58be866e-95c2-422c-8fc1-763b10224a4d@58be.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Quintin\nSalle: C392\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C392 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250129T150000Z
+SUMMARY:Colle Anglais
+UID:7988fca0-0da9-4e79-b233-6839d80013ee@7988.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mullaert\nSalle: C381\nMatière : Maths
+DURATION:PT1H
+LOCATION:C381 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20240920T120000Z
+SUMMARY:Colle Maths
+UID:95d674c2-6867-47ec-af73-df5b9503a3f7@95d6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Kidscheid\nSalle: C393\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C393 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241120T140000Z
+SUMMARY:Colle Anglais
+UID:313c45e9-99d0-49a7-afc8-acee07b42266@313c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Semenova\nSalle: C395\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C395 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241009T130000Z
+SUMMARY:Colle Anglais
+UID:4b14612a-de2e-42be-ace9-f28b4441ec97@4b14.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chibani\nSalle: C284\nMatière : Physique
+DURATION:PT1H
+LOCATION:C284 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241115T160000Z
+SUMMARY:Colle Physique
+UID:fab47ac3-2210-4d03-a6d3-0b0a061f1b4d@fab4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Robin\nSalle: C394\nMatière : Physique
+DURATION:PT1H
+LOCATION:C394 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250108T170000Z
+SUMMARY:Colle Physique
+UID:b41d8cd1-9c74-443c-b6b4-20dee940f487@b41d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Gallic\nSalle: C384\nMatière : Maths
+DURATION:PT1H
+LOCATION:C384 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250116T150000Z
+SUMMARY:Colle Maths
+UID:f9999185-05d5-4b70-a6be-de5ed1593966@f999.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chibani\nSalle: C284\nMatière : Physique
+DURATION:PT1H
+LOCATION:C284 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241129T150000Z
+SUMMARY:Colle Physique
+UID:b16af8d3-67d7-4b87-b32f-c3c2f46d66de@b16a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Pelletier\nSalle: C396\nMatière : Maths
+DURATION:PT1H
+LOCATION:C396 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241212T150000Z
+SUMMARY:Colle Maths
+UID:463daf6a-d50f-4bc4-b510-6e3e256d380b@463d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Poupy\nSalle: R028\nMatière : Physique
+DURATION:PT1H
+LOCATION:R028 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250122T170000Z
+SUMMARY:Colle Physique
+UID:d8135c12-2b62-4920-a43c-6d2607647850@d813.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Kidscheid\nSalle: C393\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C393 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250115T140000Z
+SUMMARY:Colle Anglais
+UID:bf4c3295-701b-4db0-bd8e-6fa44a6a1b43@bf4c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Bouverot\nSalle: M103\nMatière : Maths
+DURATION:PT1H
+LOCATION:M103 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241002T120000Z
+SUMMARY:Colle Maths
+UID:35b198d1-e966-4c4e-81e0-0afc0de56a9a@35b1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Annoussamy\nSalle: C454\nMatière : Lettres
+DURATION:PT1H
+LOCATION:C454 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241127T150000Z
+SUMMARY:Colle Lettres
+UID:027dc630-6fba-4bf9-bced-35577b4ffa85@027d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Cissokho\nSalle: C283\nMatière : Maths
+DURATION:PT1H
+LOCATION:C283 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241220T160000Z
+SUMMARY:Colle Maths
+UID:a9ed9a84-a552-4762-8578-95abfe2c4819@a9ed.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Lé-Nhu\nSalle: C383\nMatière : Maths
+DURATION:PT1H
+LOCATION:C383 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241107T160000Z
+SUMMARY:Colle Maths
+UID:a0d4da8a-d197-4120-8389-d7e250ccbe39@a0d4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chevalier\nSalle: R011\nMatière : Physique
+DURATION:PT1H
+LOCATION:R011 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241017T150000Z
+SUMMARY:Colle Physique
+UID:0e56c7a8-190f-4515-99f4-5105d41cd31a@0e56.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Gallic\nSalle: C384\nMatière : Maths
+DURATION:PT1H
+LOCATION:C384 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241017T160000Z
+SUMMARY:Colle Maths
+UID:5be3b0b6-ab31-4b56-bbd8-5f5480197de9@5be3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Lé-Nhu\nSalle: C383\nMatière : Maths
+DURATION:PT1H
+LOCATION:C383 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241128T150000Z
+SUMMARY:Colle Maths
+UID:57467973-247f-467c-a8df-4c522fed13fc@5746.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Semenova\nSalle: C395\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C395 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241218T140000Z
+SUMMARY:Colle Anglais
+UID:3b39fe9d-73dd-46e2-a497-c73b419a8557@3b39.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mullaert\nSalle: C381\nMatière : Maths
+DURATION:PT1H
+LOCATION:C381 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250131T140000Z
+SUMMARY:Colle Maths
+UID:d3167f22-bb7c-4bcc-888a-764e50b0ea95@d316.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Cissokho\nSalle: C283\nMatière : Maths
+DURATION:PT1H
+LOCATION:C283 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241122T160000Z
+SUMMARY:Colle Maths
+UID:2abcd29b-26f9-415a-be81-32e09a991efd@2abc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Cissokho\nSalle: C283\nMatière : Maths
+DURATION:PT1H
+LOCATION:C283 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241011T140000Z
+SUMMARY:Colle Maths
+UID:3040c60e-11b1-4c6e-8ac0-85e0a6624bda@3040.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Sabban\nSalle: M103\nMatière : Maths
+DURATION:PT1H
+LOCATION:M103 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20250110T160000Z
+SUMMARY:Colle Maths
+UID:38a47f57-46b7-4369-a3d1-04541042db42@38a4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Poupy\nSalle: R028\nMatière : Physique
+DURATION:PT1H
+LOCATION:R028 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241211T170000Z
+SUMMARY:Colle Physique
+UID:0e5f1b83-d1dc-433a-8acd-3d67c713dca8@0e5f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Lattanzio\nSalle: C391\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C391 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20240925T130000Z
+SUMMARY:Colle Anglais
+UID:ed8c1ff8-d025-477d-a6c4-feb94dee8cbc@ed8c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mann\nSalle: C389\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C389 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241106T150000Z
+SUMMARY:Colle Anglais
+UID:93427c2f-7d71-43ed-aab0-22cd9124a0d3@9342.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chevalier\nSalle: R011\nMatière : Physique
+DURATION:PT1H
+LOCATION:R011 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20241003T150000Z
+SUMMARY:Colle Physique
+UID:513858d0-fe44-4207-a73f-6e48f5299d69@5138.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: M. Robin\nSalle: C394\nMatière : Physique
+DURATION:PT1H
+LOCATION:C394 - Saint-Louis
+ORGANIZER;CN=Simon Lancelin:mailto:Simon Lancelin
+DTSTART:20240918T160000Z
+SUMMARY:Colle Physique
+UID:1502a888-9014-4498-ba26-49271ba6af79@1502.org
+END:VEVENT
+END:VCALENDAR

@@ -16,9 +16,8 @@ To install and run the Discord Bot MPII, follow these steps:
 
 Once the bot is running, you can use various commands to interact with it. Here are some examples:
 
-- `!help`: Display the list of available commands.
-- `!ping`: Check the bot's latency.
-- `!kick @user`: Kick a user from the server.
+- `/help`: Display the list of available commands.
+- `!/colloscope [groupe] {timezone}`: Get a .ics file with your orals.
 
 
 ## License
