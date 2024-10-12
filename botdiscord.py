@@ -39,7 +39,7 @@ async def on_message(message):
     guild=discord.Object(id=1292935532472565852)
 )
 @app_commands.describe(group = "Votre Groupe de Colles. (1-16)")
-@app_commands.describe(timezone = "Le fuseau Horaire (laisser vide si vous ne savez pas), par défaut: Europe/Paris, si il y a un décalage, essayer UTC")
+@app_commands.describe(timezone = "Le fuseau Horaire UTC+n (laisser vide si vous ne savez pas), par défaut: UTC+2, si il y a un décalage, essayer UTC")
 async def recup_colles(interaction:discord.Interaction, group:str, timezone:str = "Europe/Paris"):
     if 0<int(group)<17:
         create_colloscope(int(group), timezone)
