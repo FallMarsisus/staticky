@@ -56,13 +56,13 @@ async def recup_colles(interaction:discord.Interaction, group:str, timezone:str 
 )
 async def help(interaction:discord.Interaction):
     embed = discord.Embed(title="Le Bot des MP2I[3]",
-                      url="https://marsisus.me/staticky",
+                      url="https://github.com/FallMarsisus/Discord-Bot-MPII",
                       description="Bienvenue sur la page d'aide du bot !",
                       colour=0x00b0f4,
                       timestamp=datetime.now())
 
     embed.set_author(name="Staticky",
-                 url="https://marsisus.me/staticky")
+                 url="https://github.com/FallMarsisus/Discord-Bot-MPII")
 
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
