@@ -21,8 +21,8 @@ async def on_ready():
 
     print(f'Connecté en tant que {bot.user.name}')
 
-    botactivity = discord.Activity(type=discord.ActivityType.playing, name=" l'exiiistence.")
-    await bot.change_presence(activity=botactivity, status=discord.Status.idle)
+    botactivity = discord.Streaming(url="https://twitch.tv/marsisus", name=" l'exiiistence.")
+    await bot.change_presence(activity=botactivity)
 
 
 
@@ -35,6 +35,11 @@ async def on_message(message):
         await message.channel.send(f"quoicoubeh {message.author.mention} !")
     if "j'aime" in message.content.lower()[:6]:
         await message.author.edit(nick=f'{message.content[6:]}')
+    
+    if "dis" in message.content.lower()[:3]:
+        await message.channel.send(f"{message.content[3:]}")
+    elif "di" in message.content.lower()[:2] or "dy" in message.content.lower()[:2]:
+        await message.channel.send(f"{message.content[2:]}")
 
 
 # slash commands 
