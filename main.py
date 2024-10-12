@@ -17,9 +17,14 @@ load_dotenv()
 # Événement lorsque le bot est prêt
 @bot.event
 async def on_ready():
-    await tree.sync(guild=discord.Object(id=1292935532472565852))
+    # await tree.sync(guild=discord.Object(id=1292935532472565852))
 
     print(f'Connecté en tant que {bot.user.name}')
+
+    botactivity = discord.Activity(type=discord.ActivityType.competing, name="pour de l'exiiistence.")
+    await bot.change_presence(activity=botactivity, status=discord.Status.idle)
+
+
 
 # réagir a un message 
 @bot.event
@@ -39,7 +44,7 @@ async def on_message(message):
     guild=discord.Object(id=1292935532472565852)
 )
 @app_commands.describe(group = "Votre Groupe de Colles. (1-16)")
-@app_commands.describe(timezone = "Le fuseau Horaire UTC+n (laisser vide si vous ne savez pas), par défaut: UTC+2, si il y a un décalage, essayer UTC")
+@app_commands.describe(timezone = "Le fuseau Horaire UTC+n (laisser vide si vous ne savez pas), UTC+2 par défaut")
 async def recup_colles(interaction:discord.Interaction, group:str, timezone:str = "Europe/Paris"):
     if 0<int(group)<17:
         create_colloscope(int(group), timezone)
@@ -56,13 +61,13 @@ async def recup_colles(interaction:discord.Interaction, group:str, timezone:str 
 )
 async def help(interaction:discord.Interaction):
     embed = discord.Embed(title="Le Bot des MP2I[3]",
-                      url="https://github.com/FallMarsisus/Discord-Bot-MPII",
+                      url="https://staticky.marsisus.me",
                       description="Bienvenue sur la page d'aide du bot !",
                       colour=0x00b0f4,
                       timestamp=datetime.now())
 
     embed.set_author(name="Staticky",
-                 url="https://github.com/FallMarsisus/Discord-Bot-MPII")
+                 url="https://staticky.marsisus.me",)
 
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
