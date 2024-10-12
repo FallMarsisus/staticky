@@ -21,7 +21,7 @@ async def on_ready():
 
     print(f'Connecté en tant que {bot.user.name}')
 
-    botactivity = discord.Activity(type=discord.ActivityType.competing, name="pour de l'exiiistence.")
+    botactivity = discord.Activity(type=discord.ActivityType.playing, name=" l'exiiistence.")
     await bot.change_presence(activity=botactivity, status=discord.Status.idle)
 
 
