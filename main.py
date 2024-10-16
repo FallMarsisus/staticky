@@ -17,7 +17,7 @@ load_dotenv()
 # Événement lorsque le bot est prêt
 @bot.event
 async def on_ready():
-    # await tree.sync(guild=discord.Object(id=1292935532472565852))
+    await tree.sync(guild=discord.Object(id=1292935532472565852))
 
     print(f'Connecté en tant que {bot.user.name}')
 
@@ -86,6 +86,18 @@ Voici les commandes disponibles :
 
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
+
+async def hour_autocomplete(
+            interaction: discord.Interaction,
+            current: str,
+        ) -> list[app_commands.Choice[str]]:
+            hours = ["13", "14", "15", "16", "17", '18']
+            return [
+                app_commands.Choice(name=hour, value=hour)
+                for hour in hours if current.lower() in hour.lower()
+            ]
+
+
 # Slash command to add a colle to the marketplace
 @tree.command(
     name="add_colle",
@@ -96,9 +108,13 @@ Voici les commandes disponibles :
 @app_commands.describe(group = "Votre Groupe de Colles. (1-16)")
 @app_commands.describe(day = "Format: JJ/MM/AAAA, bien réspécter le format")
 @app_commands.describe(hour = "L'heure de la colle, sans le \"h\"")
+@app_commands.autocomplete(hour=hour_autocomplete)
 @app_commands.describe(teacher = "Le nom du professeur")
-@app_commands.describe(subject = "La matière de la colle")
+@app_commands.describe(subject = "La matière de la colle (Maths, Physique, Anglais, Lettres)")
+# @app_commands.autocomplete(subject=["Maths", "Physique", "Anglais", "Lettres"])
 @app_commands.describe(room = "La salle de la colle")
+# @app_commands.autocomplete(group=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"])
+
 async def add_colle(interaction:discord.Interaction, group:str, day:str, hour:str, teacher:str, subject:str, room:str):
     # "ASSERTIONS" A IMPLEMENTER !!!! 
     embed = discord.Embed(title=f"Colle de {subject}",
