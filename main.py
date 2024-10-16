@@ -72,7 +72,12 @@ async def recup_colles(interaction:discord.Interaction, group:str, timezone:str 
 async def help(interaction:discord.Interaction):
     embed = discord.Embed(title="Le Bot des MP2I[3]",
                       url="https://staticky.marsisus.me",
-                      description="Bienvenue sur la page d'aide du bot !\n#Voici les commandes disponibles :\n - `/parse_colles [groupe] {timezone}` : Récupérer un fichier en .ics contenant vos colles du S1\n - `/help` : Afficher l'aide",
+                      description="""
+Bienvenue sur la page d'aide du bot !
+Voici les commandes disponibles :
+- `/parse_colles [groupe] {timezone}`
+: Récupérer un fichier en .ics contenant vos colles du S1
+- `/help` : Afficher l'aide""",
                       colour=0x00b0f4,
                       timestamp=datetime.now())
 
@@ -80,6 +85,30 @@ async def help(interaction:discord.Interaction):
                  url="https://staticky.marsisus.me",)
 
     await interaction.response.send_message(embed=embed, ephemeral=True)
+
+# Slash command to add a colle to the marketplace
+@tree.command(
+    name="add_colle",
+    description="!!NE FONCTIONNE PAS !! Ajoute une collle au marketplace",
+    guild=discord.Object(id=1292935532472565852)
+
+)
+@app_commands.describe(group = "Votre Groupe de Colles. (1-16)")
+@app_commands.describe(day = "Format: JJ/MM/AAAA, bien réspécter le format")
+@app_commands.describe(hour = "L'heure de la colle, sans le \"h\"")
+@app_commands.describe(teacher = "Le nom du professeur")
+@app_commands.describe(subject = "La matière de la colle")
+@app_commands.describe(room = "La salle de la colle")
+async def add_colle(interaction:discord.Interaction, group:str, day:str, hour:str, teacher:str, subject:str, room:str):
+    # "ASSERTIONS" A IMPLEMENTER !!!! 
+    embed = discord.Embed(title=f"Colle de {subject}",
+                    description=f"Date : {day} {hour}h00\nProfesseur : {teacher}\nSalle : {room}\n Groupe : {group}\n\n! ENCORE EN PHASE DE TEST ! NON FONCTIONNEL !",
+                    colour=0xf50083, 
+                    timestamp=datetime.now())
+
+    embed.set_author(name=f"{interaction.user.name}")
+
+    await interaction.response.send_message(embed=embed)
 
 # Lancer le bot
 bot.run(os.getenv('BOT_TOKEN'))
