@@ -37,9 +37,10 @@ async def on_message(message):
         await message.channel.send(f"quoicoubeh {message.author.mention} !")
     if "j'aime" in message.content.lower()[:6]:
         await message.author.edit(nick=f'{message.content[6:]}')
-    if "dis" in message.content.lower():
-        return;
+   
     for i in range(len(message.content.split())):
+        if message.content.lower().split()[i] in exclusions:
+            continue;
         if len(message.content.split()[i]) < 4:
             continue
         if "dis" in message.content.lower().split()[i][:3] or "dit" in message.content.lower().split()[i][:3]:
