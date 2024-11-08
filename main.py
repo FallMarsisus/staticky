@@ -29,8 +29,8 @@ async def on_ready():
 # réagir a un message 
 @bot.event
 async def on_message(message):
-    if message.author == bot.user:
-        return
+    #if message.author == bot.user:
+        #return
     if "quoi" in message.content[-10:].lower():
         await message.channel.send(f"quoicoubeh {message.author.mention} !")
     if "j'aime" in message.content.lower()[:6]:
