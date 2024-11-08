@@ -13,6 +13,8 @@ bot = discord.Client( intents=intents)
 tree = app_commands.CommandTree(bot)
 
 
+exclusions = ["dire", "dis", "disons", "dites", "dîtes", "dit"]
+
 load_dotenv()
 # Événement lorsque le bot est prêt
 @bot.event
@@ -29,13 +31,14 @@ async def on_ready():
 # réagir a un message 
 @bot.event
 async def on_message(message):
-    #if message.author == bot.user:
-        #return
+    if message.author == bot.user:
+        return
     if "quoi" in message.content[-10:].lower():
         await message.channel.send(f"quoicoubeh {message.author.mention} !")
     if "j'aime" in message.content.lower()[:6]:
         await message.author.edit(nick=f'{message.content[6:]}')
-    
+    if "dis" in message.content.lower():
+        return;
     for i in range(len(message.content.split())):
         if len(message.content.split()[i]) < 4:
             continue
