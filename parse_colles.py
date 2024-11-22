@@ -52,7 +52,11 @@ def create_colloscope(groupe:int, timezone:str = "Europe/Paris"):
             continue 
         day_sem = str(day_sem).split(" ")[0]
         days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
-        day_number_sem = days.index(day_sem)
+        days_english = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        try:
+            day_number_sem = days.index(day_sem)
+        except ValueError:
+            day_number_sem = days_english.index(day_sem)
         
         # Combine day_number_sem with date
         new_days = day_number_sem + date.day;
