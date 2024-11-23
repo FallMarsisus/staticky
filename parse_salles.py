@@ -84,8 +84,8 @@ def create_image(coordinates, hour, day):
 
     # Draw the coordinates in a table format with alternating row colors
     y_text = 200
-    line_height = 50
-    padding = 10
+    line_height = 45
+    padding = 8
     for i, (room, room_type) in enumerate(coordinates):
         if y_text + line_height + padding > 3000:
             break
