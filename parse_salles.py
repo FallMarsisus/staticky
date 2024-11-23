@@ -2,6 +2,7 @@ import openpyxl
 from datetime import datetime, timedelta, timezone
 import discord
 from discord import app_commands, Embed
+from PIL import Image, ImageDraw, ImageFont
 
 def create_edt(heure:int, semestre:int, day:int) -> list[int]:
 
@@ -31,15 +32,83 @@ def create_edt(heure:int, semestre:int, day:int) -> list[int]:
 
 
 def set_value(type, hour) -> str:
-    if type == "sci":
-        return ":test_tube: :white_check_mark:"
-    if type == "info":
-        return ":desktop: :no_entry:"
-    if type == "colle":
-        return "<:colle:1309644102345949295> :grey_question:"
-    if type == "classe":
-        return ":mortar_board: :white_check_mark:"
-    else : return ""
+    if type == "Amphi":
+        return "🧪 Amphi"
+    if type == "TP":
+        return "🔬 TP"
+    if type == "Info":
+        return "💻 Info"
+    if type == "Colle":
+        return "📖 Colle"
+    if type == "Classe":
+        return "🎓 Classe"
+    if type == "?":
+        return "❓ Inconnu"
+    else:
+        return ""
+def create_image(coordinates, hour, day):
+    # Create a larger blank image with a custom background color
+    img = Image.new('RGB', (800, 5000), color=(60, 63, 65))
+    draw = ImageDraw.Draw(img)
+
+    # Load a less formal and slightly larger font
+    font = ImageFont.truetype("font.ttf", 45)
+    title_font = ImageFont.truetype("font.ttf", 55)
+    
+    # Title
+    title = f"EDT : {hour}h - {day}"
+    draw.text((400 - (draw.textbbox((0, 0), title, font=title_font)[2] - draw.textbbox((0, 0), title, font=title_font)[0]) // 2, 20), title, fill="white", font=title_font)
+
+    # Description
+    description = f"Liste des Salles disponibles à {hour}h"
+    draw.text((400 - (draw.textbbox((0, 0), description, font=font)[2] - draw.textbbox((0, 0), description, font=font)[0]) // 2, 80), description, fill="white", font=font)
+
+    # Draw the table header with a different color
+    header = ["Salle", "Type"]
+    x_text = [200, 600]
+    for i, h in enumerate(header):
+        draw.text((x_text[i] - (draw.textbbox((0, 0), h, font=font)[2] - draw.textbbox((0, 0), h, font=font)[0]) // 2, 140), h, fill="white", font=font)
+
+    # Define background colors for each type of room
+    type_colors = {
+        "Amphi": (255, 153, 153),
+        "TP": (153, 204, 255),
+        "Info": (255, 204, 204),
+        "Colle": (255, 255, 153),
+        "Classe": (255, 229, 153),
+        "?": (224, 224, 224)
+    }
+
+    # Sort coordinates by room type
+    coordinates.sort(key=lambda x: x[1])
+
+    # Draw the coordinates in a table format with alternating row colors
+    y_text = 200
+    line_height = 50
+    padding = 10
+    for i, (room, room_type) in enumerate(coordinates):
+        if y_text + line_height + padding > 3000:
+            break
+        fill_color = type_colors.get(room_type, (150, 150, 150))
+        
+        # Draw rounded rectangle
+        draw.rounded_rectangle([(0, y_text), (800, y_text + line_height)], radius=20, fill=fill_color)
+        
+        text_y = y_text + (line_height - font.getbbox(room)[3]) // 2
+        
+        # Draw the room name
+        draw.text((200 - (draw.textbbox((0, 0), room, font=font)[2] - draw.textbbox((0, 0), room, font=font)[0]) // 2, text_y), room, fill="black", font=font)
+        
+        # Draw the room type in darker gray
+        draw.text((600 - (draw.textbbox((0, 0), set_value(room_type, hour), font=font)[2] - draw.textbbox((0, 0), set_value(room_type, hour), font=font)[0]) // 2, text_y), set_value(room_type, hour), fill="gray", font=font)
+        
+        y_text += line_height + padding
+
+    # Resize the image to fit the content
+    img = img.crop((0, 0, 800, y_text))
+
+    img.save("edt.png")
+
 def parse_edt(coordinates, hour, day):
     embeds = []
 

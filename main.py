@@ -2,7 +2,7 @@ from datetime import datetime
 import discord
 from discord import app_commands
 from parse_colles import create_colloscope
-from parse_salles import create_edt, parse_edt
+from parse_salles import create_edt, parse_edt, create_image
 import os
 from dotenv import load_dotenv, dotenv_values
 
@@ -126,10 +126,12 @@ async def recup_edt(
 ):
     if 8 <= int(hour) <= 18:
         free_rooms = create_edt(int(hour), 1, day.capitalize())
-        embeds = parse_edt(sorted(free_rooms), hour, day.capitalize())
-        await interaction.response.send_message(embed=embeds[0])
-        if len(embeds) == 2:
-            await interaction.followup.send(embed=embeds[1])
+        # embeds = parse_edt(sorted(free_rooms), hour, day.capitalize())
+        # await interaction.response.send_message(embed=embeds[0])
+        # if len(embeds) == 2:
+        #     await interaction.followup.send(embed=embeds[1])
+        create_image(free_rooms, hour, day.capitalize())
+        await interaction.response.send_message(file=discord.File("edt.png"))
 
     else:
         await interaction.response.send_message(
