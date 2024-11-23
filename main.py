@@ -61,12 +61,15 @@ async def day_autocomplete(
 async def on_message(message):
     if message.author == bot.user:
         return
+    
     if "quoi" in message.content[-10:].lower():
         await message.channel.send(f"quoicoubeh {message.author.mention} !")
     if "j'aime" in message.content.lower()[:6]:
         await message.author.edit(nick=f"{message.content[6:]}")
 
     for i in range(len(message.content.split())):
+        if message.channel.id == 1292943453423931493:
+            return
         if message.content.lower().split()[i] in exclusions:
             continue
         if len(message.content.split()[i]) < 4:
