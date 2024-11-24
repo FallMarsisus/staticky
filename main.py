@@ -122,10 +122,12 @@ async def recup_colles(
 @app_commands.autocomplete(hour=hour_autocomplete)
 @app_commands.describe(day="Le jour de la semaine (par défault aujourd'hui)")
 @app_commands.autocomplete(day=day_autocomplete)
+@app_commands.describe(room="(FACULTATIF) Si vous souhaitez une salle en particulier")
 async def recup_edt(
     interaction: discord.Interaction,
     day: str = datetime.now().strftime("%A"),
     hour: str = datetime.now().strftime("%H"),
+    room: str = "",
 ):
     if 8 <= int(hour) <= 18:
         free_rooms = create_edt(int(hour), 1, day.capitalize())
@@ -133,8 +135,21 @@ async def recup_edt(
         # await interaction.response.send_message(embed=embeds[0])
         # if len(embeds) == 2:
         #     await interaction.followup.send(embed=embeds[1])
-        create_image(free_rooms, hour, day.capitalize())
-        await interaction.response.send_message(file=discord.File("edt.png"))
+        if room == "":
+            create_image(free_rooms, hour, day.capitalize())
+            await interaction.response.send_message(file=discord.File("edt.png"))
+        else:
+            for salle in free_rooms:
+                if salle[0] == room:
+                    await interaction.response.send_message(
+                        content=f"La salle {room} est libre à {hour}h le {day}!"
+                    )
+                    return
+            await interaction.response.send_message(
+                content=f"La salle {room} n'est pas libre à {hour}h le {day}!"
+            )
+
+        
 
     else:
         await interaction.response.send_message(
