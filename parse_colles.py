@@ -10,6 +10,7 @@ from ics import Calendar, Event
 def create_colloscope(groupe:int, timezone:str = "Europe/Paris"):
     try: 
         pytz.timezone(timezone)
+        timezone = timezone
     except pytz.UnknownTimeZoneError:
         timezone = "Europe/Paris"
     c = Calendar()
