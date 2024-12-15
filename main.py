@@ -68,7 +68,7 @@ async def on_message(message):
         await message.author.edit(nick=f"{message.content[6:]}")
 
     for i in range(len(message.content.split())):
-        if message.channel.id == 1292943453423931493:
+        if message.channel.id == 1292943453423931493 or message.channel.id == 1304556681774239784:
             return
         if message.content.lower().split()[i] in exclusions:
             continue
