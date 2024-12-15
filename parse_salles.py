@@ -4,7 +4,7 @@ import discord
 from discord import app_commands, Embed
 from PIL import Image, ImageDraw, ImageFont
 
-def create_edt(heure:int, semestre:int, day:int) -> list[int]:
+def create_edt(heure:int, semestre:int, day:str) -> list[(int, str, int)]:
 
     days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
     days_english = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -18,17 +18,44 @@ def create_edt(heure:int, semestre:int, day:int) -> list[int]:
 
     # Retrieve all coordinates where the cell value is 10
     coordinates = []
-    for cell in sheet[3 + (heure - 8) + 11*day_number_sem][1:]:
+    
+    # initialize the coords of the cell
+    row = 3 + (heure - 8) + 11*day_number_sem
+    column = 0
+    for i, cell in enumerate(sheet[row][1:]):
+        column+=1
         val = cell.value
-        if val is None or ("0" not in val and "O" not in val and "S1" not in val):
+        if isEmptyRoom(val):
             try:
+                freeTime = getFreeDuration(sheet, row, column, day_number_sem)
                 temp = sheet.cell(row=1, column=cell.column).value
                 if temp is not None:
-                    coordinates.append((temp, sheet.cell(row=2, column=cell.column).value))
+                    coordinates.append((temp, sheet.cell(row=2, column=cell.column).value, freeTime))
             except Exception as e:
                 print(f"Error: {e}")
-
+                
     return coordinates
+
+
+def isEmptyRoom(val:str) -> bool:
+    return (val is None or ("0" not in val and "O" not in val and "S1" not in val))
+    
+def isThisDay(row:int, dayNumber: int) -> bool : 
+	return 3 + 11*dayNumber <= row <= 13 + 11*dayNumber
+
+
+def getFreeDuration(sheet, row:int, column:int, dayNumber:int) -> int:
+    i = 0
+    val = sheet[row][column].value
+    while isEmptyRoom(val) and isThisDay(row, dayNumber):
+        i += 1
+        row += 1
+        val = sheet[row][column].value
+        
+    if not isThisDay(row, dayNumber):
+        return i + 3
+    
+    return i
 
 
 def set_value(type, hour) -> str:
@@ -46,9 +73,10 @@ def set_value(type, hour) -> str:
         return "❓ Inconnu"
     else:
         return ""
+    
 def create_image(coordinates, hour, day):
     # Create a larger blank image with a custom background color
-    img = Image.new('RGB', (800, 5000), color=(60, 63, 65))
+    img = Image.new('RGB', (1200, 5000), color=(60, 63, 65))
     draw = ImageDraw.Draw(img)
 
     # Load a less formal and slightly larger font
@@ -57,15 +85,15 @@ def create_image(coordinates, hour, day):
     
     # Title
     title = f"EDT : {hour}h - {day}"
-    draw.text((400 - (draw.textbbox((0, 0), title, font=title_font)[2] - draw.textbbox((0, 0), title, font=title_font)[0]) // 2, 20), title, fill="white", font=title_font)
+    draw.text((600 - (draw.textbbox((0, 0), title, font=title_font)[2] - draw.textbbox((0, 0), title, font=title_font)[0]) // 2, 20), title, fill="white", font=title_font)
 
     # Description
     description = f"Liste des Salles disponibles à {hour}h"
-    draw.text((400 - (draw.textbbox((0, 0), description, font=font)[2] - draw.textbbox((0, 0), description, font=font)[0]) // 2, 80), description, fill="white", font=font)
+    draw.text((600 - (draw.textbbox((0, 0), description, font=font)[2] - draw.textbbox((0, 0), description, font=font)[0]) // 2, 80), description, fill="white", font=font)
 
     # Draw the table header with a different color
-    header = ["Salle", "Type"]
-    x_text = [200, 600]
+    header = ["Salle", "Type", "Temps libre"]
+    x_text = [200, 600, 1000]
     for i, h in enumerate(header):
         draw.text((x_text[i] - (draw.textbbox((0, 0), h, font=font)[2] - draw.textbbox((0, 0), h, font=font)[0]) // 2, 140), h, fill="white", font=font)
 
@@ -86,13 +114,13 @@ def create_image(coordinates, hour, day):
     y_text = 200
     line_height = 45
     padding = 8
-    for i, (room, room_type) in enumerate(coordinates):
+    for i, (room, room_type, freeTime) in enumerate(coordinates):
         if y_text + line_height + padding > 3000:
             break
         fill_color = type_colors.get(room_type, (150, 150, 150))
         
         # Draw rounded rectangle
-        draw.rounded_rectangle([(0, y_text), (800, y_text + line_height)], radius=20, fill=fill_color)
+        draw.rounded_rectangle([(0, y_text), (1200, y_text + line_height)], radius=20, fill=fill_color)
         
         text_y = y_text + (line_height - font.getbbox(room)[3]) // 2
         
@@ -102,13 +130,16 @@ def create_image(coordinates, hour, day):
         # Draw the room type in darker gray
         draw.text((600 - (draw.textbbox((0, 0), set_value(room_type, hour), font=font)[2] - draw.textbbox((0, 0), set_value(room_type, hour), font=font)[0]) // 2, text_y), set_value(room_type, hour), fill="gray", font=font)
         
+        # Draw the free time duration
+        draw.text((1000 - (draw.textbbox((0, 0), f"{freeTime}h", font=font)[2] - draw.textbbox((0, 0), f"{freeTime}h", font=font)[0]) // 2, text_y), f"{freeTime}h", fill="black", font=font)
+        
         y_text += line_height + padding
 
     # Resize the image to fit the content
-    img = img.crop((0, 0, 800, y_text))
+    img = img.crop((0, 0, 1200, y_text))
 
     img.save("edt.png")
-
+    
 def parse_edt(coordinates, hour, day):
     embeds = []
 
@@ -119,7 +150,7 @@ def parse_edt(coordinates, hour, day):
 
     for i in range(min(25, len(coordinates))):
         embed1.add_field(name=f"**{coordinates[i][0]}**", inline=True, value=set_value(coordinates[i][1], hour))
-    embed1.set_footer(text="Made by Marsisus, Magos, Hugo, Gabriel...       ")
+    embed1.set_footer(text="Made by Marsisus, Magos, Hugo, Gabriel, Antonin...       ")
     embeds.append(embed1)
 
     if len(coordinates) > 25:
@@ -128,7 +159,7 @@ def parse_edt(coordinates, hour, day):
 
         for i in range(25, len(coordinates)):
             embed2.add_field(name=f"**{coordinates[i][0]}**", value=set_value(coordinates[i][1], hour), inline=True)
-        embed2.set_footer(text="Made by Marsisus, Magos, Hugo, Gabriel...       ")
+        embed2.set_footer(text="Made by Marsisus, Magos, Hugo, Gabriel, Antonin...       ")
         embeds.append(embed2)
 
     return embeds

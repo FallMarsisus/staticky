@@ -60,15 +60,15 @@ def create_colloscope(groupe:int, timezone:str = "Europe/Paris"):
             day_number_sem = days_english.index(day_sem)
         
         # Combine day_number_sem with date
-        new_days = day_number_sem + date.day;
+        new_days = day_number_sem + date.day
         if new_days > 30 and date.month in [4, 6, 9, 11]:
-            new_days = new_days - 30;
-            new_month = date.month + 1;
+            new_days = new_days - 30
+            new_month = date.month + 1
         elif new_days > 31 and date.month in [1, 3, 5, 7, 8, 10, 12]:
-            new_days = new_days - 31;
-            new_month = date.month + 1;
+            new_days = new_days - 31
+            new_month = date.month + 1
         else :
-            new_month = date.month;
+            new_month = date.month
         if (new_month <9):
             combined_date = datetime(2025, new_month, new_days).date()
         else:
@@ -76,7 +76,7 @@ def create_colloscope(groupe:int, timezone:str = "Europe/Paris"):
         
 
         if professor == None:
-            continue;
+            continue
         
 
         start_time = datetime.strptime(hour.split('-')[0][:-1], "%H").time()
@@ -111,7 +111,7 @@ def create_colloscope(groupe:int, timezone:str = "Europe/Paris"):
             time_ecart = offset"""
         
         e.begin = start_datetime.astimezone(pytz.timezone(timezone))
-        e.duration = ({'hours': 1});
+        e.duration = ({'hours': 1})
         e.location = f"{room} - Saint-Louis"
         e.description = f"Professeur: {professor}\nSalle: {room}\nMatière : {matière}"
         e.organizer = f"Groupe {groupe}"
