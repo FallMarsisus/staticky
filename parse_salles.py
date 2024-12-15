@@ -33,6 +33,8 @@ def create_edt(heure:int, semestre:int, day:str) -> list[(int, str, int)]:
                     coordinates.append((temp, sheet.cell(row=2, column=cell.column).value, freeTime))
             except Exception as e:
                 print(f"Error: {e}")
+                
+    return coordinates
 
 
 def isEmptyRoom(val:str) -> bool:
