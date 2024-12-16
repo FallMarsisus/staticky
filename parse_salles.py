@@ -22,17 +22,19 @@ def create_edt(heure:int, semestre:int, day:str) -> list[(int, str, int)]:
     # initialize the coords of the cell
     row = 3 + (heure - 8) + 11*day_number_sem
     column = 0
-    for i, cell in enumerate(sheet[row][1:]):
+    for cell in sheet[row][1:]:
         column+=1
         val = cell.value
         if isEmptyRoom(val):
             try:
-                freeTime = getFreeDuration(sheet, row, column, day_number_sem)
-                temp = sheet.cell(row=1, column=cell.column).value
-                if temp is not None:
-                    coordinates.append((temp, sheet.cell(row=2, column=cell.column).value, freeTime))
+                roomName = sheet.cell(row=1, column=cell.column).value
+                
+                if roomName is not None:
+                    freeTime = getFreeDuration(sheet, row, column, day_number_sem, ("R"==roomName[0]))
+                    coordinates.append((roomName, sheet.cell(row=2, column=cell.column).value, freeTime))
+                    
             except Exception as e:
-                print(f"Error: {e}")
+                print(f"\033[91mError: {e}\033[0m") # affiche en rouge l'erreur
                 
     return coordinates
 
@@ -44,7 +46,7 @@ def isThisDay(row:int, dayNumber: int) -> bool :
 	return 3 + 11*dayNumber <= row <= 13 + 11*dayNumber
 
 
-def getFreeDuration(sheet, row:int, column:int, dayNumber:int) -> int:
+def getFreeDuration(sheet, row:int, column:int, dayNumber:int, isScienceBat:bool) -> int:
     i = 0
     val = sheet[row][column].value
     while isEmptyRoom(val) and isThisDay(row, dayNumber):
@@ -52,8 +54,9 @@ def getFreeDuration(sheet, row:int, column:int, dayNumber:int) -> int:
         row += 1
         val = sheet[row][column].value
         
-    if not isThisDay(row, dayNumber):
-        return i + 3
+    #complète jusqu'à 21 si la salle est libre après
+    if not isThisDay(row, dayNumber) and not isScienceBat:
+        return i+3
     
     return i
 
