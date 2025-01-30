@@ -45,10 +45,14 @@ def create_colloscope_s2(groupe:int, timezone:str = "Europe/Paris"):
         # Convert column number to letter
         column_letter = chr(ord('A') + column - 1)
         date_str = sheet[f'{column_letter}1'].value  # Ligne 1 pour les dates à partir de la colonne F
+        if date_str is None:
+            continue
         try:
-            date = date_str.date()
+            date = datetime.strptime(date_str, "%d/%m/%Y")
         except ValueError:
             continue
+        except TypeError:
+            date = date_str
         try:
             day_sem = sheet[f"C{row}"].value
         except TypeError or day_sem is None:
