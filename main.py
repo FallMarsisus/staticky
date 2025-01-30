@@ -2,6 +2,7 @@ from datetime import datetime
 import discord
 from discord import app_commands
 from parse_colles import create_colloscope
+from parse_colles_s2 import create_colloscope_s2, next_colle
 from parse_salles import create_edt, parse_edt, create_image
 import os
 from dotenv import load_dotenv, dotenv_values
@@ -227,6 +228,68 @@ async def add_colle(
 
     await interaction.response.send_message(embed=embed)
 
+
+@tree.command(
+    name="parse_colles_s2",
+    description="Récupérer un fichier en .ics contenant vos colles du S2",
+    guild=discord.Object(id=1292935532472565852),
+)
+@app_commands.describe(group="Votre Groupe de Colles. (1-16)")
+@app_commands.describe(
+    timezone="Le fuseau Horaire UTC+n (laisser vide si vous ne savez pas), UTC+2 par défaut"
+)
+async def recup_colles_s2(
+    interaction: discord.Interaction, group: str, timezone: str = "Europe/Paris"
+):
+    if 0 < int(group) < 17:
+        create_colloscope_s2(int(group), timezone)
+        await interaction.response.send_message(
+            content=f"Voici le fichier de colles parsé pour le groupe {group} ! ",
+            file=discord.File("output_s2.ics", filename=f"groupe{group}_s2.ics"),
+        )
+    else:
+        await interaction.response.send_message(
+            content="Ce groupe n'existe pas banane !"
+        )
+
+
+@tree.command(
+    name="next_colle",
+    description="Récupérer les informations de la prochaine colle du S2 pour un groupe",
+    guild=discord.Object(id=1292935532472565852),
+)
+@app_commands.describe(group="Votre Groupe de Colles. (1-16)")
+@app_commands.describe(
+    timezone="Le fuseau Horaire UTC+n (laisser vide si vous ne savez pas), UTC+2 par défaut"
+)
+async def next_colle_s2(
+    interaction: discord.Interaction, group: str, timezone: str = "Europe/Paris"
+):
+    if 0 < int(group) < 17:
+        colle_info = next_colle(int(group), timezone)
+        if colle_info:
+            embed = discord.Embed(
+                title=f"Prochaine Colle de {colle_info['subject']}",
+                description=f"""
+                Date : {colle_info['date']}
+                Jour : {colle_info['day']}
+                Heure de début : {colle_info['start_time']}
+                Heure de fin : {colle_info['end_time']}
+                Professeur : {colle_info['professor']}
+                Salle : {colle_info['room']}
+                """,
+                colour=0x00B0F4,
+                timestamp=datetime.now(),
+            )
+            await interaction.response.send_message(embed=embed)
+        else:
+            await interaction.response.send_message(
+                content=f"Aucune colle trouvée pour le groupe {group}."
+            )
+    else:
+        await interaction.response.send_message(
+            content="Ce groupe n'existe pas banane !"
+        )
 
 # Lancer le bot
 bot.run(os.getenv("BOT_TOKEN"))
