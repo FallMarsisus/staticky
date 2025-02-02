@@ -2,264 +2,318 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Lé-Nhu\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250403T150000Z
-SUMMARY:Colle Maths
-UID:9dc4eef9-f861-4848-a646-b1f00ff348a6@9dc4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Mullaert\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250505T150000Z
-SUMMARY:Colle Maths
-UID:cad2b6cb-c5ef-4e34-bb66-e65502fa22f1@cad2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Lé-Nhu\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250327T150000Z
-SUMMARY:Colle Maths
-UID:01c6be59-c21c-4316-b00a-374d8fe00bca@01c6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Gallic\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250313T170000Z
-SUMMARY:Colle Maths
-UID:45a10fe6-0a3f-483b-90f3-955c6d793686@45a1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Cissokho\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250516T160000Z
-SUMMARY:Colle Maths
-UID:21569c00-b883-443a-9a1e-a1ec4f5852bb@2156.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Poupy\nSalle: Undef\nMatière : Physique
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250212T160000Z
-SUMMARY:Colle Physique
-UID:77417b65-c6ee-4318-af09-1fe736f0509f@7741.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Mann\nSalle: Undef\nMatière : Anglais
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250205T160000Z
-SUMMARY:Colle Anglais
-UID:9813360a-99a5-4b20-ad63-b496b8ceb835@9813.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Chibani\nSalle: Undef\nMatière : Physique
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250604T120000Z
-SUMMARY:Colle Physique
-UID:5145230b-d06d-45a0-9552-825e9a19af12@5145.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Sabban\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250611T120000Z
-SUMMARY:Colle Maths
-UID:34bdce8d-1725-4bb0-8d25-40387cc49d83@34bd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Semenova\nSalle: Undef\nMatière : Anglais
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250430T130000Z
-SUMMARY:Colle Anglais
-UID:b5f3e118-6a5f-483f-8d32-fc742d5a386a@b5f3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Quintin\nSalle: Undef\nMatière : Anglais
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250528T140000Z
-SUMMARY:Colle Anglais
-UID:9fae2e1e-6fd9-4c15-8e72-9798363cbd80@9fae.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Cissokho\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250606T150000Z
-SUMMARY:Colle Maths
-UID:46ce7bed-6abc-4fd0-a20e-d10b18e3c5e4@46ce.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Poupy\nSalle: Undef\nMatière : Physique
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250618T150000Z
-SUMMARY:Colle Physique
-UID:3af0a2e4-6f87-4efe-b3f9-f1897aaa67cb@3af0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Pelletier\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250320T160000Z
-SUMMARY:Colle Maths
-UID:bd144822-ea6d-4c68-88ec-c20afc5c9a35@bd14.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Gallic\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250213T150000Z
-SUMMARY:Colle Maths
-UID:42722146-2cbd-4cf0-a038-68e17474f0dc@4272.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Annoussamy\nSalle: Undef\nMatière : Lettres
+DESCRIPTION:Professeur: Mr Annoussamy\nSalle: ?\nMatière : Lettres
 DURATION:PT1H30M
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250410T140000Z
+LOCATION:? - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250508T153000Z
 SUMMARY:Colle Lettres
-UID:58ee0d35-a666-4b7d-b06a-a1bb53184244@58ee.org
+UID:82420c3e-88cc-400f-a6ee-40ef38ebbc9e@8242.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Gauvin\nSalle: Undef\nMatière : Anglais
+DESCRIPTION:Professeur: Mme Sabban\nSalle: C252\nMatière : Maths
 DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250609T160000Z
-SUMMARY:Colle Anglais
-UID:6f7b6c17-b5bb-47e3-99a5-37a3decb4411@6f7b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Chevalier\nSalle: Undef\nMatière : Physique
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250407T110000Z
-SUMMARY:Colle Physique
-UID:5c187549-e2c4-4157-8ec4-9952d4e6950c@5c18.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Robin\nSalle: Undef\nMatière : Physique
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250507T160000Z
-SUMMARY:Colle Physique
-UID:7b25a5d6-7d59-41b8-ae01-4f81e05117c7@7b25.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Mann\nSalle: Undef\nMatière : Anglais
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250319T150000Z
-SUMMARY:Colle Anglais
-UID:e7e4c0e2-1ccb-4314-8050-436554633074@e7e4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Bouverot\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250205T140000Z
+LOCATION:C252 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250409T120000Z
 SUMMARY:Colle Maths
-UID:4931b3a4-998f-44b1-a986-caf2226dce26@4931.org
+UID:41ae5ab2-1bca-4695-bbc2-a97f25a325fe@41ae.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Pourcelot d’Hennezel\nSalle: Undef\nMatière : Physique
+DESCRIPTION:Professeur: Mme Lé-Nhu\nSalle: C383\nMatière : Maths
 DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250520T160000Z
+LOCATION:C383 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250612T140000Z
+SUMMARY:Colle Maths
+UID:5e268c87-0cfd-42c4-b91d-81e9b2a99668@5e26.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Belaggoune\nSalle: C452\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C452 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250619T150000Z
+SUMMARY:Colle Anglais
+UID:8e4b69bd-de4d-4a89-9c29-f960ad15f0f2@8e4b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mullaert\nSalle: C281\nMatière : Maths
+DURATION:PT1H
+LOCATION:C281 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250526T150000Z
+SUMMARY:Colle Maths
+UID:f2e74969-31fb-4462-ba78-7d47fc64b196@f2e7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Cissokho\nSalle: C281\nMatière : Maths
+DURATION:PT1H
+LOCATION:C281 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250314T170000Z
+SUMMARY:Colle Maths
+UID:9a010c07-0510-46ea-bb46-e0e5a89c975f@9a01.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Jospin\nSalle: C252\nMatière : Info
+DURATION:PT1H
+LOCATION:C252 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250306T150000Z
+SUMMARY:Colle Info
+UID:55d3768d-fbfe-413b-bb27-4def950a6d1d@55d3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Poupy\nSalle: R028\nMatière : Physique
+DURATION:PT1H
+LOCATION:R028 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250402T160000Z
 SUMMARY:Colle Physique
-UID:3649dbe9-9ebe-4c1e-82eb-72de24a6c4ac@3649.org
+UID:ef577233-2a05-49f9-9639-d7148dca9dc5@ef57.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Chibani\nSalle: Undef\nMatière : Physique
+DESCRIPTION:Professeur: Mr Gallic\nSalle: C384\nMatière : Maths
 DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
+LOCATION:C384 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250515T160000Z
+SUMMARY:Colle Maths
+UID:8e32bc58-8bb7-45fe-89e0-dbf8dc85b6f1@8e32.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chevalier\nSalle: R011\nMatière : Physique
+DURATION:PT1H
+LOCATION:R011 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250515T140000Z
+SUMMARY:Colle Physique
+UID:c4e5dae3-0daf-42b3-becb-40fa7c93b98b@c4e5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Kidscheid\nSalle: C393\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C393 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
 DTSTART:20250326T140000Z
-SUMMARY:Colle Physique
-UID:0ccba5d2-c6d5-4619-9b5c-0d28eefa35bb@0ccb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Chevalier\nSalle: Undef\nMatière : Physique
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250310T120000Z
-SUMMARY:Colle Physique
-UID:1761dc34-8575-4d48-b5b1-ae8bbd847b2c@1761.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mr Gallic\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250306T170000Z
-SUMMARY:Colle Maths
-UID:9053dad9-7245-4bb2-9c8f-05d7bfb55b96@9053.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Mullaert\nSalle: Undef\nMatière : Maths
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250428T150000Z
-SUMMARY:Colle Maths
-UID:a8b556ed-16e4-43ad-84c8-f1012d3a5879@a8b5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Mann\nSalle: Undef\nMatière : Anglais
-DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250514T150000Z
 SUMMARY:Colle Anglais
-UID:08b4b1da-c457-4ced-b3eb-ba6435210ead@08b4.org
+UID:f4a7bba1-a192-4ce8-9b3a-86a3b5d08f52@f4a7.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Quintin\nSalle: Undef\nMatière : Anglais
+DESCRIPTION:Professeur: Mr Gallic\nSalle: C384\nMatière : Maths
 DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
-DTSTART:20250305T150000Z
+LOCATION:C384 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250522T160000Z
+SUMMARY:Colle Maths
+UID:7920dc05-366b-4800-ab50-dff668d6ff5d@7920.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Bouverot\nSalle: C252\nMatière : Maths
+DURATION:PT1H
+LOCATION:C252 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250319T140000Z
+SUMMARY:Colle Maths
+UID:51913bf9-0dbb-4376-873a-22e2850b4749@5191.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Robin\nSalle: V158\nMatière : Physique
+DURATION:PT1H
+LOCATION:V158 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250305T170000Z
+SUMMARY:Colle Physique
+UID:f6f75783-7bcb-49e9-8a5b-6fa7b3dd65a1@f6f7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Semenova\nSalle: C395\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C395 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250521T130000Z
 SUMMARY:Colle Anglais
-UID:46abd002-106a-4f94-a0ce-733117ae5b78@46ab.org
+UID:71ce3232-942a-4f07-97c7-07f4916bc911@71ce.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Professeur: Mme Kidscheid\nSalle: Undef\nMatière : Anglais
+DESCRIPTION:Professeur: Mr Lattanzio\nSalle: C391\nMatière : Anglais
 DURATION:PT1H
-LOCATION:Undef - Saint-Louis
-ORGANIZER;CN=Groupe 1:mailto:Groupe 1
+LOCATION:C391 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250604T130000Z
+SUMMARY:Colle Anglais
+UID:fe209ade-58e7-43cc-a3ee-e9a01b957091@fe20.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Gauvin\nSalle: C387\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C387 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250407T160000Z
+SUMMARY:Colle Anglais
+UID:0231f540-f41a-41d5-ba55-1602e5dbbb4d@0231.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Viegas\nSalle: ?\nMatière : Info tp
+DURATION:PT2H
+LOCATION:? - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250430T140000Z
+SUMMARY:Colle Info tp
+UID:6b82b97a-6b93-45e8-b253-cf84a658d34b@6b82.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Sabban\nSalle: C283\nMatière : Maths
+DURATION:PT1H
+LOCATION:C283 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
 DTSTART:20250402T130000Z
+SUMMARY:Colle Maths
+UID:2ecbf836-50b8-4432-b496-25456558ed09@2ecb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Jospin\nSalle: C282\nMatière : Info
+DURATION:PT1H
+LOCATION:C282 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250505T100000Z
+SUMMARY:Colle Info
+UID:638bdf1d-bb26-4ab3-ae30-a88350721d18@638b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Lé-Nhu\nSalle: C383\nMatière : Maths
+DURATION:PT1H
+LOCATION:C383 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250619T140000Z
+SUMMARY:Colle Maths
+UID:f711892b-9f08-4e4a-ae61-b1e6e7f55a4e@f711.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Quintin\nSalle: C392\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C392 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250507T140000Z
 SUMMARY:Colle Anglais
-UID:84609f37-bb1f-452a-8933-c34daa33888c@8460.org
+UID:a18edabb-1049-40e1-bf44-e51cf495ef12@a18e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chevalier\nSalle: ?\nMatière : Physique
+DURATION:PT1H
+LOCATION:? - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250317T120000Z
+SUMMARY:Colle Physique
+UID:a06fa4c1-ec4f-449f-9f70-706be1c370a3@a06f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mann\nSalle: C389\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C389 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250212T150000Z
+SUMMARY:Colle Anglais
+UID:338196af-8750-432a-bcc1-2377d938641c@3381.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Menet\nSalle: C152\nMatière : Info tp
+DURATION:PT2H
+LOCATION:C152 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250213T150000Z
+SUMMARY:Colle Info tp
+UID:656e1038-53cb-4404-b50e-7d446360562b@656e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mann\nSalle: C389\nMatière : Anglais
+DURATION:PT1H
+LOCATION:C389 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250312T160000Z
+SUMMARY:Colle Anglais
+UID:12e21aaf-db99-4fa1-a1e8-7987967cb36f@12e2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Menet\nSalle: C152\nMatière : Info tp
+DURATION:PT2H
+LOCATION:C152 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250327T150000Z
+SUMMARY:Colle Info tp
+UID:ab928ffd-f774-48f3-8895-b5b838cbc95c@ab92.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Mullaert\nSalle: C281\nMatière : Maths
+DURATION:PT1H
+LOCATION:C281 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250303T160000Z
+SUMMARY:Colle Maths
+UID:b3b38471-483b-4318-a8c1-c9ef51fd96c5@b3b3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chevalier\nSalle: ?\nMatière : Physique
+DURATION:PT1H
+LOCATION:? - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250609T110000Z
+SUMMARY:Colle Physique
+UID:53ba9468-d9c3-4d3d-883b-e2348695561f@53ba.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Poupy\nSalle: R028\nMatière : Physique
+DURATION:PT1H
+LOCATION:R028 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250528T150000Z
+SUMMARY:Colle Physique
+UID:21924b3c-1429-4f02-b421-645d585674bb@2192.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Annoussamy\nSalle: ?\nMatière : Lettres
+DURATION:PT1H30M
+LOCATION:? - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250313T150000Z
+SUMMARY:Colle Lettres
+UID:0ca3ba21-d5d3-42e1-8ad0-342b1c10b212@0ca3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Cissokho\nSalle: C281\nMatière : Maths
+DURATION:PT1H
+LOCATION:C281 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250207T160000Z
+SUMMARY:Colle Maths
+UID:869b8045-9dba-4b20-8393-2d0336e220c2@869b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chibani\nSalle: C284\nMatière : Physique
+DURATION:PT1H
+LOCATION:C284 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250430T130000Z
+SUMMARY:Colle Physique
+UID:9575cfa3-1387-47a9-a353-d4e8c5cc96dc@9575.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mr Pelletier\nSalle: C396\nMatière : Maths
+DURATION:PT1H
+LOCATION:C396 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250501T150000Z
+SUMMARY:Colle Maths
+UID:042342de-7c3c-439a-8e4f-2eda62c608d1@0423.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Professeur: Mme Chibani\nSalle: C284\nMatière : Physique
+DURATION:PT1H
+LOCATION:C284 - Saint-Louis
+ORGANIZER;CN=Groupe 10:mailto:Groupe 10
+DTSTART:20250205T130000Z
+SUMMARY:Colle Physique
+UID:45abc641-1f1e-42e2-87fe-d309544a6643@45ab.org
 END:VEVENT
 END:VCALENDAR

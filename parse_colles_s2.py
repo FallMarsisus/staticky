@@ -39,12 +39,12 @@ def create_colloscope_s2(groupe:int, timezone:str = "Europe/Paris"):
             continue
         matière = matière.capitalize()
         professor = sheet[f'B{row}'].value
-        hour = sheet[f'D{row}'].value
-        room = "Undef" #sheet[f'F{row}'].value
-        duration = sheet[f'E{row}'].value  # Assuming the duration is in column F
+        room = sheet[f'D{row}'].value
+        hour = sheet[f'E{row}'].value
+        duration = sheet[f'F{row}'].value  # Assuming the duration is in column F
         # Convert column number to letter
         column_letter = chr(ord('A') + column - 1)
-        date_str = sheet[f'{column_letter}1'].value  # Ligne 1 pour les dates à partir de la colonne F
+        date_str = sheet[f'{column_letter}1'].value  # Ligne 1 pour les dates à partir de la colonne G
         if date_str is None:
             continue
         try:
