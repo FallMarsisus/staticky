@@ -6,6 +6,7 @@ from parse_colles_s2 import create_colloscope_s2, next_colle
 from parse_salles import create_edt, parse_edt, create_image
 import os
 from dotenv import load_dotenv, dotenv_values
+import random as rng
 
 
 # Créer une instance du bot
@@ -64,7 +65,11 @@ async def on_message(message):
         return
     
     if "quoi" in message.content[-10:].lower():
-        await message.channel.send(f"quoicoubeh {message.author.mention} !")
+        r = rng.randint(0,1000)
+        if r == 1 :
+            await message.channel.send(f"quoicoubeh {message.author.mention} !")
+        else : 
+            await message.channel.send(f"FEUUR {message.author.mention} !!!")
     if "j'aime" in message.content.lower()[:6]:
         await message.author.edit(nick=f"{message.content[6:]}")
 
