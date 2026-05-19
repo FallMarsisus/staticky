@@ -1,15 +1,15 @@
-# Staticky 
+# Discord bot for MP2Is 
 
 ## Description
 
-The Discord Bot MPII is a Python-based bot that provides various functionalities for managing the MP2I Discord server.
+ Staticky is a Python-based bot that provides various functionalities for managing the MP2I Discord server.
 
 ## Installation
 
-To install and run the Discord Bot MPII, follow these steps:
+To install and runStaticky, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/fallmarsisus/staticky.git`
-2. Install the required dependencies: `pip install -r requirements.txt` // Pas tout de suite mdr
+2. Install the required dependencies: `pip install -r requirements.txt` 
 3. Run the bot: `botdiscord.py`
 
 ## Commands
@@ -18,6 +18,8 @@ Once the bot is running, you can use various commands to interact with it. Here 
 
 - `/help`: Display the list of available commands.
 - `/colloscope [group] {timezone}`: Get a .ics file with your orals.
+
+There will be more soon
 
 
 ## License
